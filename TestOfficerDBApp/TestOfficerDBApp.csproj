@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F899CF06-EF94-49D5-8353-81DB8D9056E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestOfficerDBApp</RootNamespace>
+    <AssemblyName>TestOfficerDBApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllActiveOfficersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllActiveOfficersForm.Designer.cs">
+      <DependentUpon>AllActiveOfficersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllOffendersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllOffendersForm.Designer.cs">
+      <DependentUpon>AllOffendersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOffender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOffender.Designer.cs">
+      <DependentUpon>EditOffender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offenders.cs" />
+    <Compile Include="officerDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>officerDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="officerDBDataSet1.cs">
+      <DependentUpon>officerDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="officerDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>officerDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="officerDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>officerDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="officerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="officerForm.Designer.cs">
+      <DependentUpon>officerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="offenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="offenderForm.Designer.cs">
+      <DependentUpon>offenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="incidentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="incidentForm.Designer.cs">
+      <DependentUpon>incidentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllActiveOfficersForm.resx">
+      <DependentUpon>AllActiveOfficersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllOffendersForm.resx">
+      <DependentUpon>AllOffendersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOffender.resx">
+      <DependentUpon>EditOffender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="officerForm.resx">
+      <DependentUpon>officerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="offenderForm.resx">
+      <DependentUpon>offenderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="incidentForm.resx">
+      <DependentUpon>incidentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="officerDBDataSet.xsc">
+      <DependentUpon>officerDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>officerDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="officerDBDataSet.xss">
+      <DependentUpon>officerDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet1.xsc">
+      <DependentUpon>officerDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>officerDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="officerDBDataSet1.xss">
+      <DependentUpon>officerDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet2.xsc">
+      <DependentUpon>officerDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>officerDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="officerDBDataSet2.xss">
+      <DependentUpon>officerDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bitmap1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
